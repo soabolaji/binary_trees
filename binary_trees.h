@@ -38,17 +38,6 @@ typedef struct levelorder_queue_s
 	struct levelorder_queue_s *next;
 } levelorder_queue_t;
 
-/**
- * struct node_s - singly linked list
- * @node: const binary tree node
- * @next: points to the next node
- */
-typedef struct node_s
-{
-	const binary_tree_t *node;
-	struct node_s *next;
-} ll;
-
 /* Printing helper function */
 void binary_tree_print(const binary_tree_t *);
 
@@ -94,5 +83,8 @@ heap_t *array_to_heap(int *array, size_t size);
 int heap_extract(heap_t **root);
 int *heap_to_sorted_array(heap_t *heap, size_t *size);
 void btlo_helper(const binary_tree_t *tree, void (*func)(int), size_t level);
+int remove_type(bst_t *root);
+int btic_helper(const binary_tree_t *tree, size_t index, size_t size);
+int btih_helper(const binary_tree_t *tree);
 
 #endif /* BINARY_TREES_H */
